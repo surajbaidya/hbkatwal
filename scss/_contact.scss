@@ -1,0 +1,214 @@
+.contact-details{
+    background-color: $light-blue;
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+    &::after{
+        position: absolute;
+        content: "";
+        width: 200px;
+        height: 200px;
+        background-color:$heading-color ;
+        opacity: 0.5;
+        top: 5%;
+        left: 10%;
+        border-radius: 100%;
+    }
+    &::before{
+        position: absolute;
+        content: "";
+        width: 150px;
+        height: 150px;
+        background-color:#B4E197 ;
+        opacity: 0.5;
+        top: 20%;
+        right: 40%;
+        border-radius: 100%;
+    }
+    .circle{
+        position: absolute;
+        width: 150px;
+        height: 150px;
+        background-color:#7FB5FF ;
+        opacity: 0.5;
+        top: 60%;
+        right: 15%;
+        border-radius: 100%;
+    }
+    .wrapper {
+        margin-top: 80px;
+        margin-bottom: 80px;
+        position: relative;
+        z-index: 100;
+    }
+    .row {
+        .card {
+            width: 300px;
+            height: 300px;
+            margin: 30px;
+            background: rgba(255, 255, 255, 0.1);
+            overflow: hidden;
+            backdrop-filter: blur(5px);
+            border-top: 1px solid rgba(255, 255, 255, 0.5);
+            border-left: 1px solid rgba(255, 255, 255, 0.5);
+            border-radius: 15px;
+            position: relative;
+            cursor: pointer;
+            .card-body {
+                padding: 1rem;
+                color: $heading-color;
+                position: relative;
+                padding-top: 20%;
+                left: 50%;
+                top: 50%;
+                width: 90%;
+                transform: translateY(-50%) translateX(-50%);
+                transition: all 0.5s ease-in-out;
+                .card-img  {
+                    i{
+                        font-size: 60px;
+                        transition: 0.5s;
+                        border-radius: 50%;
+                    }
+                }
+                .name {
+                    margin-top: 20px;
+                    transition: 0.5s;
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: 28px;
+                    line-height: 35px;
+                    letter-spacing: -0.4px;
+                    color:  $heading-color;
+                    text-transform: capitalize;
+                }
+                .testimonial {
+                    pointer-events: none;
+                    transition: 0.5s;
+                    opacity: 1;
+                    font-size: 18px;
+                    line-height: 20px;
+                    color: $grey-color;
+                }
+                
+            }
+            &:hover{
+                .card-body {
+                    // padding-top: 20%;
+                    .testimonial,.name,.card-img i{
+                        transform: translateY(-17px);
+                        opacity: 1;
+                    }
+                }
+            }
+            
+        }
+    }     
+}
+
+
+
+
+.contact-page {
+    .wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 100px;
+        padding-top: 70px;
+        padding-bottom: 70px;
+        align-items: center;
+
+        @media screen and (max-width: 1023px) {
+            grid-template-columns: 1fr;
+            grid-gap: 60px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            grid-gap: 10px;
+
+            h2 {
+                margin-bottom: 26px;
+            }
+
+            input[type=text] {
+                font-family: 'Lato', sans-serif;
+                font-style: normal;
+                font-weight: 400;
+                font-size: 1.6rem;
+                line-height: 180%;
+                letter-spacing: 0.5px;
+                color: var(--color-heading);
+            }
+
+            #message {
+                height: 156px;
+                display: flex;
+                border: 1px solid $darker-grey-color;
+                box-sizing: border-box;
+                border-radius: 8px;
+                padding: 11px 28px;
+                resize: none;
+
+                &[type=text] {
+                    font-family: 'Lato', sans-serif;
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 1.6rem;
+                    line-height: 180%;
+                    letter-spacing: 0.5px;
+                    color: $darker-grey-color;
+                }
+            }
+
+            input {
+                display: block;
+                width: 100%;
+                border: 1px solid $darker-grey-color;
+                box-sizing: border-box;
+                border-radius: 8px;
+                padding: 11px 28px;
+            }
+        }
+
+        iframe {
+            width: 100%;
+            height: 595px;
+        }
+
+        .golden-button {
+            width: 113px;
+            margin-top: 29px;
+            width: 154px;
+            height: 50px;
+            border-radius: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: $heading-color;
+            border: 2px solid $heading-color;
+            transition: all 300ms ease-in-out;
+
+            &:hover {
+                background: $light-blue;
+
+                span {
+                    animation: btnTransform .5s linear;
+                    font-weight: 500;
+                    color: $heading-color;
+                }
+            }
+
+            span {
+                font-weight: 500;
+                font-size: 1.8rem;
+                line-height: 26px;
+                transition: all 300ms ease-in-out;
+                color: $white-color;
+                text-transform: capitalize;
+
+            }
+        }
+    }
+}

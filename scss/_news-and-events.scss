@@ -1,0 +1,339 @@
+.detail-page-wrapper,
+.news-and-events-wrapper {
+    padding-top: 68px;
+    padding-bottom: 100px;
+
+    .wrapper {
+        h2 {
+            font-weight: 700;
+            font-size: 4.2rem;
+            line-height: 52px;
+            text-align: center;
+            letter-spacing: -0.4px;
+            color: $heading-color;
+            text-align: left;
+            margin-bottom: 32px;
+        }
+
+        .content-wrapper {
+            display: grid;
+            grid-template-columns: 2.5fr 1fr;
+            grid-gap: 40px;
+
+            @media screen and (max-width: 920px) {
+                grid-template-columns: 1fr;
+            }
+
+            .main-content {
+                .item__list {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    grid-column-gap: 38px;
+                    grid-row-gap: 44px;
+
+                    @media screen and (max-width: 1024px) {
+                        grid-column-gap: 4%;
+                    }
+
+                    @media screen and (max-width: 768px) {
+                        grid-template-columns: 1fr;
+                    }
+
+                    @media screen and (max-width: 480px) {
+                        grid-template-columns: 1fr;
+                    }
+
+                    .item {
+                        img {
+                            border-radius: 10px;
+                            width: 100%;
+                            height: 275px;
+                            margin-bottom: 22px;
+                            object-fit: cover;
+                        }
+
+                        h3 {
+                            font-weight: 500;
+                            font-size: 2.2rem;
+                            line-height: 32px;
+                            color: $heading-color;
+                            text-transform: capitalize;
+                            margin-bottom: 8px;
+                        }
+
+                        .date-and-label {
+                            display: flex;
+                            flex-direction: row;
+                            flex-wrap: wrap;
+                            grid-gap: 30px;
+                            margin-bottom: 20px;
+
+                            .date,
+                            .comment {
+                                display: flex;
+                                flex-direction: row;
+                                align-items: center;
+                                grid-gap: 8px;
+                                font-weight: 400;
+                                font-size: 1.6rem;
+                                line-height: 19px;
+                                color: $grey-color;
+                            }
+                        }
+
+                        p {
+                            font-weight: 400;
+                            font-size: 2rem;
+                            line-height: 26px;
+                            color: $grey-color;
+                            mix-blend-mode: normal;
+                        }
+                    }
+                }
+
+                .pagination {
+                    border: none;
+                    margin-top: 72px;
+
+                    .page-item {
+                        border: none;
+
+                        .prev,
+                        .next {
+                            font-style: normal;
+                            font-weight: 400;
+                            font-size: 1.6rem;
+                            line-height: 19px;
+                            color: $grey-color !important;
+                        }
+
+                        &.active {
+                            .page-link {
+                                background-color: $heading-color;
+                                color: $white-color;
+                            }
+                        }
+
+                        a {
+                            border: none;
+                        }
+
+                        .page-link {
+                            border: none;
+                            padding: 12px 16px;
+                            font-weight: 400;
+                            font-size: 1.6rem;
+                            line-height: 19px;
+                            color: $black-color;
+                        }
+                    }
+                }
+            }
+
+            .side-content {
+                &__search-wrapper {
+                    background-color: $white-color;
+                    border-radius: 10px;
+
+                    .side__form-wrap {
+                        margin-bottom: 35px;
+
+                        @media(max-width:767px) {
+                            margin-top: 60px;
+                            padding: 0px;
+                        }
+
+                        .search__form-wrap {
+
+                            display: flex;
+                            flex-direction: row;
+                            flex-wrap: nowrap;
+
+                            @media screen and (max-width: 1285px) {
+                                flex-wrap: wrap;
+                            }
+
+                            input {
+                                border: 1px solid $color__light-grey;
+                                display: inline-block;
+                                font-size: 16px;
+                                color: $color__grey;
+                                padding: 15px 0 15px 15px;
+                                border-radius: 10px 0 0 10px;
+                                width: 100%;
+                                box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.05);
+
+                                @media screen and (max-width: 1285px) {
+                                    border-radius: 10px;
+                                }
+
+                            }
+
+                            .search_btn {
+                                background-color: $color_dark-blue;
+                                color: $white-color;
+                                font-size: 25px;
+                                padding: 10px 22px;
+                                margin-bottom: 0;
+                                border-radius: 0 10px 10px 0;
+                                line-height: 32px;
+                                transition: 0.5s all ease-in-out;
+                                border: 1px solid $color_dark-blue;
+                                &:hover{
+                                    background-color: #fff;
+                                    color: $color_dark-blue;
+                                    a{
+                                        color: $color_dark-blue;
+                                    }
+                                }
+
+                                @media screen and (max-width: 1285px) {
+                                    width: 100%;
+                                    margin-top: 10px;
+                                    border-radius: 10px;
+                                    text-align: center;
+                                }
+                                a{
+                                    color: #fff;
+                                    font-size: 18px;
+                                }
+                            }
+                        }
+                    }
+
+                    img {
+                        border-radius: 10px;
+                    }
+
+                    .other-programs {
+                        background: --color-white;
+
+                        h3 {
+                            font-size: 26px;
+                            line-height: 28px;
+                            text-transform: capitalize;
+                            margin-bottom: 24px;
+                            color: $color_dark-blue;
+
+                            @media screen and (max-width: 1024px) {
+                                font-size: 22px;
+                            }
+                        }
+
+                        ul {
+                            display: flex;
+                            flex-direction: column;
+                            grid-gap: 30px;
+
+                            li {
+                                display: flex;
+                                flex-direction: row;
+                                flex-wrap: nowrap;
+                                grid-gap: 20px;
+                                transition: all 0.2s ease-in-out;
+                                padding-bottom: 30px;
+                                border-bottom: 1px solid #EFEFEF;
+
+                                @media screen and (max-width: 1024px) {
+                                    flex-direction: column;
+                                }
+
+                                @media screen and (max-width: 767px) {
+                                    flex-direction: row;
+                                }
+
+                                &:hover {
+                                    transform: scale(1.05);
+                                }
+
+                                img {
+                                    max-width: 110px;
+                                    max-height: 110px;
+
+                                }
+
+                                .other-programs-suppourting-text {
+                                    display: flex;
+                                    flex-direction: column;
+                                    grid-gap: 10px;
+
+                                    h4 {
+                                        font-style: normal;
+                                        font-weight: 600;
+                                        font-size: 22px;
+                                        line-height: 26px;
+                                        color: $color_dark-blue;
+
+                                        @media screen and (max-width: 1440px) {
+                                            font-size: 18px;
+                                        }
+
+                                        @media screen and (max-width: 768px) {
+                                            font-size: 16px;
+                                        }
+
+                                        @media(max-width:479px) {
+                                            font-size: 18px;
+
+                                            br {
+                                                display: none;
+                                            }
+                                        }
+                                    }
+
+                                    .progrem__calander {
+                                        span {
+                                            font-size: 16px;
+                                            color: $grey-color;
+                                        }
+
+                                        .span__date {
+                                            margin-left: 10px;
+                                            line-height: 19px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .news-and-events {
+                        background: #FFFFFF;
+                        border: 1px solid var(--color-gray-border);
+                        padding: 32px 26px;
+                        display: flex;
+                        flex-direction: column;
+                        grid-gap: 28px;
+
+                        h3 {
+                            font-weight: 700;
+                            font-size: 2.4rem;
+                            line-height: 28px;
+                        }
+
+                        ul {
+                            display: flex;
+                            flex-direction: column;
+                            grid-gap: 30px;
+
+                            li {
+                                display: flex;
+                                flex-direction: column;
+                                grid-gap: 10px;
+                                font-weight: 500;
+                                font-size: 2rem;
+                                line-height: 30px;
+                                color: $heading-color;
+                            }
+                        }
+
+                        a {
+                            span {
+                                color: $heading-color;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

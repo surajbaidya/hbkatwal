@@ -1,0 +1,242 @@
+/* color varriables-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+$heading-color: #00367F;
+$grey-color:#878790;
+$white-color: #ffffff;
+$dark-primary-color: #1E0E62;
+$dark-grey-color:#696969; 
+$darker-grey-color:#313131;
+$base-color:#1D2835;
+$white-border:#EBEAED;
+$light-blue:#F0F6FF;
+$color-yellow:#DBA800;
+$light-black: #313131;
+$black-color:#000;
+$color_dark-blue:#02367C;
+$color__light-grey:#EDEDED;
+$color__grey:#B5B5B5;
+$color__dark-black:#161616;
+$color__lighter-grey:#DADADA;
+$color__darker-grey:#B2B2B2;
+
+
+
+
+
+
+
+
+
+/* reset ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+*{
+    margin: 0px;
+    padding: 0;
+    text-decoration: none;
+    outline: 0;
+    border: 0;
+    appearance: none;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+/* default styling and custom-helper-classes-------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+html{
+    font-size: 10px;
+
+}
+body{
+    font-family: 'DM Sans', sans-serif;
+    font-size: 10px;
+    overflow-x: hidden;
+    line-height: 10px; 
+}
+a{
+    text-decoration: none;
+}
+
+h2{
+    font-style: normal;
+    font-weight: 700;
+    font-size: 4.2rem;
+    line-height: 52px;
+    letter-spacing: -0.4px;
+    color: $heading-color;
+    margin-bottom: 0px;
+    text-transform: capitalize;
+}
+h3{
+    font-style: normal;
+    font-weight: 500;
+    font-size: 2.2rem;
+    line-height: 32px;
+    color: $heading-color;
+    margin-bottom: 0px;
+}
+p{
+    margin-bottom: 0px;
+}
+
+ul{
+    padding: 0;
+    margin: 0;
+}
+.wrapper{
+    padding-left: 10%;
+    padding-right: 10%;
+
+}
+.row{
+    margin: 0px;
+    padding: 0px;
+}
+
+.col-lg-3,.col-lg-4,.col-lg-5.col-lg-6,.col-lg-7,.col-lg-9{
+    padding: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+.row>* {
+    padding-right:0px;
+    padding-left: 0px;
+}
+@media screen and (max-width: 1024px) {
+    .wrapper{
+        padding-left: 6%;
+        padding-right: 6%;
+    }
+}
+@media screen and (max-width: 550px) {
+    .wrapper{
+        padding-left: 3%;
+        padding-right: 3%;
+    }
+}
+
+
+
+// button animation==============================
+@keyframes btnTransform{
+    0%{
+        transform: translateX(0%);
+        opacity: 1;
+    }
+
+    20%{
+        transform: translateX(-50%);
+        opacity: 0;
+    }
+
+    60%{
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+
+    80%{
+        transform: translateX(50%);
+        opacity: 0;
+    }
+
+    100%{
+        transform: translateX(0%);
+    }
+}
+
+
+
+/* Shine image hover effect*/
+.hover14 figure {
+	position: relative;
+}
+.hover14 figure::before {
+	position: absolute;
+	top: 0;
+	left: -75%;
+	z-index: 2;
+	display: block;
+	content: '';
+	width: 50%;
+	height: 100%;
+	background: -webkit-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(255,255,255,.3) 100%);
+	background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,.3) 100%);
+	-webkit-transform: skewX(-25deg);
+	transform: skewX(-25deg);
+}
+.hover14 figure:hover::before {
+	-webkit-animation: shine .75s;
+	animation: shine .75s;
+}
+@-webkit-keyframes shine {
+	100% {
+		left: 125%;
+	}
+}
+@keyframes shine {
+	100% {
+		left: 125%;
+	}
+}
+
+
+
+// resuable-componets-scss
+.hero-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    &:before{
+        content: '';
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,0.4);
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    .page-label{
+        background-color: $heading-color;
+        display: inline;
+        padding:19px 45px;
+        border-radius:100px;
+        text-transform: capitalize;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 300ms ease-in-out;
+        position: relative;
+        z-index: 99;
+        cursor: pointer;
+            &:hover{
+                background: $white-color;
+                span{
+                    animation: btnTransform .5s linear;
+                    font-weight: 300;
+                    color: $heading-color;
+
+
+                }
+            }
+            span{
+                text-transform: capitalize;
+                letter-spacing: .5px;
+                font-size: 1.6rem;
+                transition: all 300ms ease-in-out;
+                color: $white-color;
+                font-size: 2.4rem;
+            }
+    }
+}
+
+
+// youtube play button styling
+iframe{
+    button{
+        display: none !important;
+    }
+}
+
+img.mfp-img{
+    width: 800px;
+}
+.mfp-title,.mfp-counter{
+    font-size: 18px;
+}

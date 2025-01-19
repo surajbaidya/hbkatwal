@@ -1,0 +1,263 @@
+
+// // shop detail css--------------------------------------
+.shop-detail-wrapper{
+    .content-wrapper{
+        .main-content{
+            h2{
+                @media screen and (max-width: 425px) {
+                    font-size:3.4rem;
+                }
+            }
+            .item-detail{
+                display: grid;
+                grid-template-columns: repeat(2,1fr);
+                grid-gap: 32px;
+                margin-bottom: 64px;
+                @media screen and (max-width: 1474px) {
+                    grid-template-columns: 1fr;                    
+              }
+                .item-img{
+                    width: 100%;
+                  
+                    border-radius: 10px;
+                    @media screen and (max-width: 1680px) {
+                        height: 402px;
+                        object-fit: cover;
+                    }
+                    @media screen and (max-width: 425px) {
+                        height: 302px;
+                        object-fit: contain;
+                    }
+                }
+                .suppourting-text{
+                    h3{
+                        font-family: 'DM Sans';
+                        font-weight: 500;
+                        font-size: 2.2rem;
+                        line-height: 32px;
+                        color: $heading-color;
+                        text-transform: capitalize;
+                        margin-bottom: 5px;
+                    }
+                    .page,.price{
+                        font-weight: 400;
+                        font-size: 2rem;
+                        line-height: 26px;
+                        color: $grey-color;
+                        mix-blend-mode: normal;
+                        margin-bottom: 10px;
+                    }
+                    p{
+                        margin-top: 22px;
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: 2rem;
+                        line-height: 26px;
+                        text-align: justify;
+                        color: $grey-color;
+                        mix-blend-mode: normal;
+                        margin-bottom: 16px;
+                    }
+                    h4{
+                        font-weight: 400;
+                        font-size: 2rem;
+                        line-height: 26px;
+                        text-align: justify;
+                        color: $heading-color;
+                        mix-blend-mode: normal;
+                        text-transform: capitalize;
+                        margin-bottom:6px ;
+                    }
+                    .contact{
+                        text-transform: capitalize;
+                        display: flex;
+                        flex-direction: row;
+                        flex-wrap: wrap;
+                        grid-column-gap: 55px;
+                        font-weight: 400;
+                        font-size: 20px;
+                        line-height: 26px;
+                        text-align: justify;
+                        color: $heading-color;
+                        mix-blend-mode: normal;
+                    }
+                    .quantity{
+                        margin-top: 25px;
+                        display: flex;
+                        flex-direction: column;
+                        grid-gap: 14px;
+                        h5{
+                            font-weight: 500;
+                            font-size: 1.8rem;
+                            line-height: 26px;
+                            color: $heading-color;
+                            text-transform: capitalize;
+                        }
+                        &__wrapper{
+                            display: flex;
+                            flex-direction: row;
+                            grid-gap: 25px;
+                            flex-wrap: wrap;
+                            align-items: flex-start;
+                            .qunatity__value{
+                                border: 1px solid #DADADA;
+                                border-radius: 30px;
+                                padding-top: 6px;
+                                padding-bottom: 6px;
+                                font-weight: 500;
+                                font-size: 18px;
+                                line-height: 26px;
+                                color: $black-color;
+                                text-align: center;
+                                display: inline;
+                                max-width: 106px;
+                                text-align: center;
+                            }
+                            .buy__btn{
+                                background-color: $heading-color;
+                                display: inline;
+                                padding:6px 89px;
+                                border-radius:30px;
+                                text-transform: uppercase;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                transition: all 300ms ease-in-out;
+                                cursor: pointer;
+                                border: 1px solid $heading-color;
+                                    &:hover{
+                                        background: $white-color;
+                                        span{
+                                            animation: btnTransform .5s linear;
+                                            font-weight: 300;
+                                            color: $heading-color;
+                        
+                                        }
+                                    }
+                                    span{
+                                        text-transform: uppercase;
+                                        font-weight: 500;
+                                        transition: all 300ms ease-in-out;
+                                        color: $white-color;
+                                        font-size: 1.8rem;
+                                        line-height: 26px;
+                                    }
+                            }
+                        }
+                       
+                    }
+                }
+            }
+            form{
+                border: 1px solid #F3F3F3;
+                box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.02);
+                padding: 36px;
+                padding-bottom: 60px;
+                border-radius: 10px;
+                @media screen and (max-width: 388px) {
+                    padding: 20px;
+                }
+                ul{
+                    display: grid;
+                    grid-template-columns: repeat(2,1fr);
+                    grid-gap: 41px;
+                    @media screen and (max-width: 767px) {
+                        grid-template-columns: repeat(1,1fr);
+                    }
+                    li{
+                        display: flex;
+                        flex-direction: column;
+                        grid-gap: 25px;
+                        &:last-child{
+                            grid-column: 1/3;
+                            @media screen and (max-width: 767px) {
+                                grid-column: unset;
+                            }
+                        }
+                        label{
+                            font-weight: 400;
+                            font-size: 1.6rem;
+                            line-height: 21px;
+                            color: $black-color;
+                            text-transform: uppercase;
+                        }
+                        input{
+                            border: 1px solid #EDEDED;
+                            box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.05);
+                            border-radius: 30px;
+                            padding: 15px 20px;
+                            padding-bottom: 14px;
+                            font-family: 'DM Sans';
+                            font-style: normal;
+                            font-weight: 400;
+                            font-size: 16px;
+                            line-height: 21px;
+                            color: $black-color;
+                            &::placeholder{
+                                font-family: 'DM Sans';
+                                font-style: normal;
+                                font-weight: 400;
+                                font-size: 16px;
+                                line-height: 21px;
+                                color: #B2B2B2;
+                            }
+                        }
+                        textarea{
+                            padding: 15px 20px;
+                            padding-bottom: 14px;
+                            border: 1px solid #EDEDED;
+                            box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.05);
+                            border-radius: 30px;
+                            min-height: 232px;
+                            font-family: 'DM Sans';
+                            font-style: normal;
+                            font-weight: 400;
+                            font-size: 16px;
+                            line-height: 21px;
+                            color: $black-color;
+                            &::placeholder{
+                                font-family: 'DM Sans';
+                                font-style: normal;
+                                font-weight: 400;
+                                font-size: 16px;
+                                line-height: 21px;
+                                color: #B2B2B2;
+                            }
+                        }
+                    }
+                }
+                .submit__btn{
+                    margin-top: 42px;
+                    background-color: $heading-color;
+                    display: inline;
+                    padding:12px 50px;
+                    border-radius:30px;
+                    text-transform: uppercase;
+                    display: inline-flex;
+                    align-items: center;
+                    justify-content: center;
+                    transition: all 300ms ease-in-out;
+                    cursor: pointer;
+                    border: 1px solid $heading-color;
+                        &:hover{
+                            background: $white-color;
+                            span{
+                                animation: btnTransform .5s linear;
+                                font-weight: 300;
+                                color: $heading-color;
+            
+                            }
+                        }
+                        span{
+                            text-transform: uppercase;
+                            font-weight: 500;
+                            transition: all 300ms ease-in-out;
+                            color: $white-color;
+                            font-size: 1.8rem;
+                            line-height: 26px;
+                        }
+                }
+            }
+        }
+    }
+}

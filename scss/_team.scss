@@ -1,0 +1,45 @@
+.detail-page-wrapper{
+    &.team-wrapper{
+        background-color: $light-blue;
+        .team__title {
+            h2{
+                display: inline-block;
+                margin-bottom: 20px;
+            }
+            p{
+                font-size: 18px; 
+                color: $light-black;
+                line-height: 26px;
+                margin-bottom: 66px;
+            }
+        }
+        .main__team{
+            .team__content{
+                
+                display: inline-block;
+                
+                img{
+                    border-radius: 50%;
+                }
+                .person__text{
+                    margin-top: 30px;
+                    h3{
+                        font-size: 22px;
+                        font-weight: 500;
+                        color: $dark-primary-color;
+                    }
+                    p{
+                        font-size: 18px;
+                        font-weight: 500;
+                        color: $dark-grey-color;
+                        margin-top: 10px;
+                       line-height: 26px;
+                    }
+                }
+                @media(max-width: 991px){
+                    margin-bottom: 40px;
+                }
+            }
+        }
+    }
+}

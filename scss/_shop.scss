@@ -1,0 +1,66 @@
+.shop-wrapper{
+    .wrapper{
+        .content-wrapper{
+            .main-content{
+                .shop-item-list{
+                    .item{
+                        padding-bottom: 35px;
+                        .item__img{
+                            margin-bottom: 0px;
+                            box-shadow: -1px 2px 20px -2px rgba(0, 0, 0, 0.14);
+                        }
+                        .item-desc{
+                            padding: 24px 30px;
+                            box-shadow: -1px 2px 20px -2px rgba(0, 0, 0, 0.14);
+                            h3{
+                                margin-bottom: 5px;
+                            }
+                            .details{
+                                font-weight: 400;
+                                font-size: 2rem;
+                                line-height: 26px;
+                                color:$grey-color;
+                                mix-blend-mode: normal;
+                                display: flex;
+                                flex-direction: column;
+                                grid-gap: 10px;
+                            }
+                            .buy__btn{
+                                background-color: $heading-color;
+                                display: inline;
+                                padding:6px;
+                                width: 100%;
+                                border-radius:10px;
+                                text-transform: uppercase;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                transition: all 300ms ease-in-out;
+                                margin-top: 20px;
+                                cursor: pointer;
+                                border: 1px solid $heading-color;
+                                    &:hover{
+                                        background: $white-color;
+                                        span{
+                                            animation: btnTransform .5s linear;
+                                            font-weight: 300;
+                                            color: $heading-color;
+                        
+                                        }
+                                    }
+                                    span{
+                                        text-transform: uppercase;
+                                        font-weight: 500;
+                                        transition: all 300ms ease-in-out;
+                                        color: $white-color;
+                                        font-size: 1.8rem;
+                                        line-height: 26px;
+                                    }
+                            }
+                        }
+                    }
+                } 
+            }
+        }
+    }
+}   
